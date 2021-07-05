@@ -1,5 +1,5 @@
 ************************************
-Thank you for purchasing!
+Thank you for enhancing your learning process !
 ************************************
 - To get started run install.php to setup database
 - Afterwards follow documentation for further setup
