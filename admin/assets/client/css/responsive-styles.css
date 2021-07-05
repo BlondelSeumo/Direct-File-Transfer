@@ -1,0 +1,53 @@
+/*=======================================================================================
+| Project Name: Upload & Share
+| Author: Berkine
+| Author URL: https://codecanyon.net/user/berkine/portfolio
+| Version: 1.0
+| File name: client/responsive-styles.css
+| Date Created: 25.10.2020
+| Website: filetransfer.berkine.cloud
+========================================================================================= */
+
+/* ==========================================================================           
+ *
+ *    RESPONSIVE LAYOUT STYLES
+ *
+ * ========================================================================== */
+
+@media screen and (max-width: 520px) {
+  body {
+    font-size: 10px;
+  }
+
+  section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section .container-fluid {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  section .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  h6 {
+    font-size: 10px;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  section .form-title {
+    margin-bottom: 2rem;
+  }
+  
+}

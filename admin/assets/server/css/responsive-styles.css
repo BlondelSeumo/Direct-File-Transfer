@@ -1,0 +1,101 @@
+/*=======================================================================================
+| Project Name: Upload & Share
+| Author: Berkine
+| Author URL: https://codecanyon.net/user/berkine/portfolio
+| Version: 1.0
+| File name: server/responsive-styles.css
+| Date Created: 25.10.2020
+| Website: filetransfer.berkine.cloud
+========================================================================================= */
+
+/* ==========================================================================           
+ *
+ *    RESPONSIVE LAYOUT STYLES
+ *
+ * ========================================================================== */
+
+@media screen and (max-width: 520px) {
+  .main-sidebar {
+    width: 0;
+  }
+
+  .main-sidebar .brand-link {
+    display: none;
+  }
+
+  .main-header {
+    margin-left: 0;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+  }
+
+  .content-wrapper .content-body {
+    padding: 1rem;
+  }
+
+  .content-wrapper .content-body .box {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  footer {
+    display: none;
+  }
+ 
+}
+
+@media screen and (min-width: 521px) and (max-width: 1024px) {
+  .main-sidebar {
+    width: 50px;
+  }
+
+  .main-sidebar .sidebar > nav > ul > li.nav-header {
+    display: none;
+  }
+
+  .main-sidebar .sidebar > nav > ul > li {
+    text-align: center;
+  }
+
+  .main-sidebar .sidebar > nav > ul > li > a.nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-sidebar .sidebar > nav > ul > li > a > i.nav-icon {
+    font-size: 18px!important;
+    margin-right: 0.2rem!important;
+  }
+
+  .main-sidebar .sidebar > nav > ul > li > a > p {
+    display: none!important;
+  }
+
+  .main-sidebar .brand-link {
+    width: 50px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .main-sidebar .brand-link span {
+    display: none;
+  }
+
+  .main-header {
+    margin-left: 50px;
+  }
+
+  .content-wrapper {
+    margin-left: 50px;
+  }
+
+  .content-wrapper .content-body .box {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  footer {
+    display: none;
+  }
+
+}

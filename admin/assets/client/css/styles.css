@@ -1,0 +1,819 @@
+/*=======================================================================================
+| Project Name: Upload & Share
+| Author: Berkine
+| Author URL: https://codecanyon.net/user/berkine/portfolio
+| Version: 1.0
+| File name: client/styles.css
+| Date Created: 21.11.2020
+| Website: envato.berkine.cloud/s3-filetransfer
+========================================================================================= */
+
+
+/* -------------------------------------------- */
+/*             TABLE OF CONTENTS
+/* -------------------------------------------- */
+/*   00 - PRELOAD STYLES			            */
+/*   01 - GLOBAL STYLES 			            */
+/*   02 - FILE UPLOAD BOX STYLES (FILEPOND)     */
+/*   03 - EMAIL BOX STYLES	     	            */
+/*   04 - UPLOAD BUTTON STYLES	       	        */
+/*   05 - UPLOAD PROCESS STYLES                 */
+/*   06 - UPLOAD RESULTS STYLES 	            */
+/*   07 - UPLOAD SETTINGS STYLES (MODAL)        */
+/*   08 - PURCHASE BUTTON & LOGO                */
+/*   09 - COPYRIGHT                             */
+/*   10 - RESPONSIVE LAYOUT STYLES              */
+
+
+
+/* ==========================================================================           
+ *
+ *    00 - PRELOAD STYLES
+ *
+ * ========================================================================== */
+
+.no-js #loader { display: none;  }
+
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+
+.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(../img/preload.gif) center no-repeat #fff;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    01 - GLOBAL STYLES
+ *
+ * ========================================================================== */
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	color: #0E2E40;
+	background: #F5F5F5;
+}
+
+h3 {
+	color: #0E2E40;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 12px;
+	color: #0E2E40;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+section {
+	padding: 64px;
+	position: relative;
+}
+
+section .form-title {
+	margin-bottom: 4rem;
+}
+
+section .form-title h3 {
+	text-shadow: 0 1px 2px rgba(57,73,76,.2);
+}
+
+section .form-title span {
+	color: #01CD3E;
+}
+
+section .form-title h6 span a {
+	color: #01CD3E;
+	text-decoration: none;
+	outline: none;
+	
+}
+section .form-title h6 span a:hover {
+	color: #0E2E40;
+}
+
+.form-wrapper {
+	background: #FFF;
+	border-top: 7px solid #0E2E40;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 2rem;
+	width: 100%;
+	position: relative;
+}
+
+#settings {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #0E2E40;
+	margin-right: 10px;
+	margin-top: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#settings:hover {
+	color: #01CD3E;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    02 - FILE UPLOAD BOX STYLES (FILEPOND)
+ *
+ * ========================================================================== */
+
+ .select-file:hover {
+ 	cursor: pointer;
+ }
+
+.filepond--root {
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	color: #0E2E40;
+	heigth: 100px;
+}
+
+.filepond--drop-label {
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800;
+	color: #0E2E40;
+	height:150px;
+}
+
+.filepond--drop-label.filepond--drop-label label {
+	font-weight: 800;
+	margin: 0 0 0.5rem;
+}
+
+.filepond--drop-label.filepond--drop-label label i {
+	font-size: 44px;
+	margin-bottom: 0.5rem;
+	font-weight: 400;
+}
+
+.filepond--drop-label.filepond--drop-label label span#restrictions {
+	font-size: 10px;
+	font-weight: 600;
+}
+
+.filepond--drop-label.filepond--drop-label label:hover {
+	cursor: pointer;
+}
+
+.filepond--browser.filepond--browser {
+	bottom: 1.75em;
+}
+
+.filepond--file-info {
+	font-weight: 400;
+}
+
+.filepond--item-panel {
+	background: #0e2e40;
+}
+
+.filepond--panel-root {
+	border-radius: 0;
+	background-color: #f6f6f6;
+}
+
+.filepond--label-action {
+	text-decoration: none;
+    color: #01CD3E;
+}
+
+.filepond--label-action:hover {
+	color: #0e2e40;
+}
+
+[data-filepond-item-state*='invalid'] .filepond--item-panel, [data-filepond-item-state*='error'] .filepond--item-panel {
+	background-color: #c44e47!important;
+}
+
+#filepond-warning {
+	display: none;
+	text-align: center;
+	font-size: 10px;
+}
+
+#filepond-warning span {
+	background: #C44E47;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    03 - EMAIL BOX STYLES
+ *
+ * ========================================================================== */
+
+#email-box {
+	display: block;
+}
+
+.form-group {
+	font-size: 11px;
+}
+
+.form-group label {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.form-control {
+	background-color: #FFF;
+	height: auto;
+	font-size: 11px;
+	border-radius: 0;
+	color: #01cd3e;
+}
+
+.form-control[readonly] {
+	background-color: #FFF;
+	font-size: 10px;
+}
+
+.form-control:hover {
+	border-color: #01cd3e;
+	webkit-box-shadow: 0px 0px 3px 1px rgba(1,205,62,.4);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(1,205,62,.4);
+	box-shadow: 0px 0px 3px 1px rgba(1,205,62,.4);
+	transition: all 0.2s;
+}
+
+.form-control:focus {
+	border-color: #01cd3e;
+	webkit-box-shadow: 0px 0px 3px 1px rgba(1,205,62,.4);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(1,205,62,.4);
+	box-shadow: 0px 0px 3px 1px rgba(1,205,62,.4);
+	transition: all 0.2s;
+}
+
+.input-group-append button {
+	border-radius: 0;
+}
+
+.email-group,
+#send-from {
+	margin-bottom: 0.5rem;
+}
+
+.btn {
+	height: auto;
+	font-size: 11px;
+	border-radius: 0;
+	color: #FFF;
+}
+
+.btn-email-option {
+	border: 1px solid rgba(57,73,76,.2);
+	color: #FFF;
+	background: #0e2e40;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 0;
+	outline: none!important;
+	box-shadow: none!important;
+}
+
+.btn-email-option:hover {
+	background-color: #01CD3E;
+	border-color: #01CD3E;
+	color: #FFF;
+}
+
+.tooltip {
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+}
+
+.tooltip-inner {
+  padding: 5px 10px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 0;
+}
+
+#receiver-error,
+#sender-error {
+	font-size: 10px;
+	color: #C44E47;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    04 - UPLOAD BUTTON STYLES
+ *
+ * ========================================================================== */
+
+.form-submit-button {
+	margin-bottom: 0!important;
+}
+
+.form-submit-button button {
+	background-color: #01CD3E;
+	color: #FFF;
+	text-transform: uppercase;
+	border-color: #01CD3E;
+	border-radius: 0px;
+	font-size: 12px;
+	font-weight: 600;
+	min-width: 200px;
+	padding: .8rem 3.4rem;
+	transition: all 0.3s ease;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+.form-submit-button button:hover {
+	background-color: #0e2e40;
+	border-color: #0e2e40;
+	color: #FFF;
+}
+
+.form-submit-button .ripple {
+  	position:relative;
+  	-webkit-transition: all 0.2s ease;
+  	-moz-transition: all 0.2s ease;
+  	-o-transition: all 0.2s ease;
+  	transition: all 0.2s ease;
+  	-webkit-box-shadow: 0px 4px 7px -2px rgba(20,20,20,.5);
+	-moz-box-shadow: 0px 4px 7px -2px rgba(20,20,20,.5);
+	box-shadow: 0px 4px 7px -2px rgba(20,20,20,.5);
+}
+
+.form-submit-button .ripple:hover {
+	cursor: pointer;
+}
+
+.form-submit-button .ink {
+  	display: block;
+  	position: absolute;
+  	background:rgba(255, 255, 255, 0.3);
+  	border-radius: 100%;
+  	-webkit-transform:scale(0);
+     -moz-transform:scale(0);
+       -o-transform:scale(0);
+          transform:scale(0);
+}
+
+.form-submit-button .animate {
+	-webkit-animation:ripple 0.65s linear;
+   	-moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(2.5);}
+}
+
+
+
+/*======================================================
+*
+*    05 - UPLOAD PROCESS STYLES
+*
+*=======================================================*/
+
+#upload-box {
+	overflow: hidden;
+	display: none;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	border: 1px solid rgba(57,73,76,.2);
+}
+
+#upload-box h6 {
+	font-size: 14px;
+	margin-bottom: 1rem;
+}
+
+#upload-box #file-info p {
+	margin-bottom: 0;
+	font-size: 11px;
+}
+
+#upload-box span {
+	text-transform: none;
+}
+
+#upload-box #result p {
+	margin-bottom: 0;
+	font-size: 11px;
+}
+
+#upload-box #result {
+	margin-bottom: 2rem;
+}
+
+#upload-status {
+	line-height: 1.2;
+}
+
+#upload-status .status {
+	margin-bottom: 1.5rem;
+}
+
+#upload-status .file-info .name {
+	font-size: 10px;
+	color: #0e2e40;
+}
+
+#upload-status .file-info .name span,
+#upload-status .file-info .size span {
+	font-weight: 800;
+}
+
+#upload-status .file-info .size {
+	font-size: 10px;
+	color: #0e2e40;
+}
+
+.status .success {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: green;
+}
+
+.status .error {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: red;
+}
+
+/*------------------------------------------*/
+/*    Progress Bar
+/*------------------------------------------*/
+
+.progress-bar {
+	margin-bottom: 1.5rem;
+	height: 1.5rem;
+	-webkit-box-shadow: 0 1px 4px rgba(57,73,76,.35);
+	box-shadow: 0 1px 4px rgba(57,73,76,.35);
+	border-radius: 0px;
+	background-color: #008f2b!important;
+}
+
+.progress {
+	border-radius: 0rem;
+	position:relative;
+	overflow: hidden;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);	
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.progress-statistics {
+	position: absolute;
+	left:50%;
+	z-index:5;
+	color: #0e2e40;
+	font-weight: 800;
+	font-size: 11px;
+	padding-top: 0.2rem;
+}
+
+
+
+/*======================================================
+*
+*    06 - UPLOAD RESULTS STYLES
+*
+*=======================================================*/
+
+#upload-results {
+	display: none;
+	overflow: hidden;
+}
+
+#upload-results-title {
+	text-align: center;
+}
+
+#upload-results-title i {
+	font-size: 50px;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+#upload-results-title h5 {
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 16px;
+	margin-bottom: 1rem;
+}
+
+#final-message {
+	margin-bottom: 1.5rem;
+}
+
+#files-data {
+	text-align: none;
+	font-size: 10px;
+	margin: 0 2rem;
+	border-top: 1px solid #e1dfdd;
+	padding-top: 1rem;
+}
+
+#files-data span {
+	font-weight: 800;
+}
+
+#files-data .file-total {
+	margin-bottom: 1rem;
+}
+
+#files-data .file-size {
+	margin-bottom: 1rem;
+}
+
+.link-duration {
+	margin-bottom: 1.5rem;
+}
+
+#final-message span {
+	font-size: 10px;
+	color: #0e2e40;
+	text-align: center;
+}
+
+#final-message .success {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: green;
+	font-weight: 600;
+	text-align: center;
+}
+
+.download-links {
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    07 - UPLOAD SETTINGS STYLES (MODAL)
+ *
+ * ========================================================================== */
+
+.modal-content {
+	border-top: 5px solid #0e2e40;
+	border-radius: 0;
+}
+
+.modal-header {
+ 	padding: 1rem;
+ 	
+}
+
+.modal-title {
+ 	font-size: 14px;
+ 	font-weight: 800;
+ 	text-transform: uppercase;
+}
+
+.modal-body {
+	padding: 1.5rem;
+}
+
+.modal-body .option-title {
+	font-weight: 600;
+	font-size: 10px
+}
+
+.modal-body label {
+	font-size: 10px;
+	padding-top: 3px;
+}
+
+.modal-body i {
+	cursor: pointer;
+}
+
+.close {
+	font-size: 1rem;
+}
+
+#share-type {
+	margin-bottom: 1.5rem;
+}
+
+#private-link {
+	margin-bottom: 3.5rem;
+}
+
+#encryption {
+	margin-bottom: 1.5rem;
+}
+
+.awselect {
+	font-size: 10px!important;
+	box-shadow: 0 1px 3px 0 rgba(50,50,50,.2), 0 2px 1px -1px rgba(50,50,50,.12), 0 1px 1px 0 rgba(50,50,50,.14);
+}
+
+/* -------------------------------------------- */
+/* 		Awesome Select Dropdown
+/* -------------------------------------------- */
+
+.awselect .front_face {
+	padding: 5px 10px!important;
+}
+
+.awselect .front_face > .bg {
+	background: #FFF!important;
+	color: #212932;
+	box-shadow: 0 1px 3px 0 rgba(50, 50, 50, 0.2), 0 2px 1px -1px rgba(50, 50, 50, 0.12), 0 1px 1px 0 rgba(50, 50, 50, 0.14);
+}
+
+.awselect .back_face {
+	padding: 0px!important;
+	float: left;
+}
+
+.awselect.animate2 > .bg {
+	-webkit-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+	-moz-box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+	box-shadow: 0px 4px 7px -2px rgba(0,0,0,.5);
+}
+
+.awselect .back_face ul li a {
+	padding: 5px 10px!important;
+	float: left;
+	border-bottom: 1px solid #ced4da;
+}
+
+.awselect .back_face ul li a:hover {
+	background: #212932;
+	color: #01CD3E;
+}
+
+/* -------------------------------------------- */
+/* 		CHECKBOXES
+/* -------------------------------------------- */
+
+.slider-checkbox {
+  position: relative;
+}
+
+.slider-checkbox input {
+  margin: 0px;
+  margin-top: 1px;
+  cursor: pointer;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background: red;
+  width: 40px;
+  height: 20px;
+}
+
+.slider-checkbox input:checked + .label:before {
+  background-color: #01CD3E;
+  content: "\f00c";
+  padding-left: 6px;
+}
+
+.slider-checkbox input:checked + .label:after {
+  left: 21px;
+}
+
+.slider-checkbox .label {
+  position: relative;
+  padding-left: 46px;
+}
+
+.slider-checkbox .label:before, .slider-checkbox .label:after {
+  position: absolute;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s, left 0.3s;
+}
+
+.slider-checkbox .label:before {
+  content: "\f00d";
+  color: #fff;
+  box-sizing: border-box;
+  font-family: 'Font Awesome 5 Free';
+  padding-left: 23px;
+  font-size: 10px;
+  line-height: 20px;
+  background-color: #0e2e40;
+  left: 0px;
+  top: 0px;
+  height: 20px;
+  width: 40px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.slider-checkbox .label:after {
+  content: "";
+  letter-spacing: 20px;
+  background: #fff;
+  left: 1px;
+  top: 1px;
+  height: 18px;
+  width: 18px;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    08 - PURCHASE BUTTON & LOGO
+ *
+ * ========================================================================== */
+
+#purchase-button {
+	margin-top: 1.3rem;
+}
+
+#purchase-button a {
+	background: red;
+	font-size: 10px;
+	padding: 10px 32px;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: 700;
+	outline: none;
+  	text-decoration: none;
+  	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+#purchase-button a:hover {
+	background: #0E2E40;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    09 - COPYRIGHT
+ *
+ * ========================================================================== */
+
+#copyright {
+	margin-top: 1rem;
+}
+
+#copyright p {
+	margin-bottom: 0;
+	font-size: 10px;
+}
+
+#copyright p a {
+	color: #01CD3E;
+	font-weight: 700;
+}
+
+
+
+
+
+
+
